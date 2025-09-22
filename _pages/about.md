@@ -13,7 +13,7 @@ profile:
  #   <p>123 your address street</p>
   #  <p>Your City, State 12345</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -29,9 +29,9 @@ latest_posts:
 
 # Welcome  
 
-I’m Frank, a recent Master’s graduate in Engineering Design with a passion for sustainability, innovation, and problem-solving — especially where they come together to tackle real-world challenges. Over the past year I’ve also travelled widely, gaining new perspectives and experiences that shape how I approach both work and life.  
+I’m Frank, a recent Master’s graduate in Engineering Design with a passion for sustainability, innovation, and problem-solving — especially where they come together to tackle real-world challenges. Over the past year I’ve travelled widely, gaining new perspectives and experiences that shape how I approach both work and life. Check out my blog on this.
 
-On this site you’ll find my projects, professional experience, and ideas at the intersection of engineering, data, and business, as well as a glimpse into the journeys and interests that drive me.  
+On this site you’ll find my projects, blogs, and ideas at the intersection of engineering, data, and business, as well as a glimpse into the journeys and interests that drive me.  
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
