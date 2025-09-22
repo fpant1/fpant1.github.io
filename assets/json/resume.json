@@ -1,200 +1,194 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Frank Panton",
+    "label": "Engineering Design Graduate",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "pantonfrank@gmail.com",
+    "phone": "+44 7925477990",
+    "summary": "A highly motivated Engineering Design graduate with experience across data analysis, energy systems modelling, automation, and business development. Passionate about sustainability and applying innovation to real-world challenges.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "London",
+      "postalCode": "",
+      "city": "London",
+      "countryCode": "UK",
+      "region": "England"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "LinkedIn",
+        "username": "frank-panton",
+        "url": "https://linkedin.com/in/frank-panton"
+      },
+      {
+        "network": "GitHub",
+        "username": "frank-panton",
+        "url": "https://github.com/frank-panton"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
+      "name": "Whistler Blackcomb / Can-Ski",
+      "position": "Ski Technician & Retail Associate",
+      "startDate": "2024-11-01",
+      "endDate": "2025-05-01",
+      "summary": "Delivered ski and snowboard servicing, equipment fitting, and customer support in a high-volume resort environment.",
+      "highlights": [
+        "Ensured safety and performance through technical equipment servicing.",
+        "Advised guests on ski and snowboard equipment suited to ability and conditions.",
+        "Gained customer service and teamwork experience in an international staff community."
+      ]
+    },
+    {
+      "name": "Weightless",
+      "position": "Founder",
+      "startDate": "2024-01-01",
+      "endDate": "Present",
+      "summary": "Founded a health-tech spinoff developing a novel health monitoring solution for people with disabilities.",
+      "highlights": [
+        "Secured £3,000 in grant funding for prototype development.",
+        "Authored and presented successful business proposal.",
+        "Designed and built first physical prototype under budget."
+      ]
+    },
+    {
+      "name": "Everoze / University of Bristol",
+      "position": "Agrivoltaics Researcher",
+      "startDate": "2022-01-01",
+      "endDate": "2024-01-01",
+      "summary": "Researched agrivoltaics systems combining solar and agricultural yields.",
+      "highlights": [
+        "Built a first-principles digital twin of agrivoltaic systems.",
+        "Modelled solar and agricultural yields to optimise site design.",
+        "Conducted feasibility and financial analysis proving viability within 5 years."
+      ]
+    },
+    {
+      "name": "Kwik-Step",
+      "position": "Design Intern",
+      "startDate": "2023-06-01",
+      "endDate": "2023-08-01",
+      "summary": "Developed disaster relief shelter concepts for humanitarian applications.",
+      "highlights": [
+        "Directed technical development of a deployable shelter.",
+        "Ensured compliance with regulatory standards for commercialisation."
+      ]
+    },
+    {
+      "name": "Arrival",
+      "position": "Engineering Intern",
+      "startDate": "2021-07-01",
+      "endDate": "2022-07-01",
+      "summary": "12-month rotational placement across R&D teams in electric vehicle manufacturing.",
+      "highlights": [
+        "Managed assembly of robotic end-effectors for composite ply placement, delivered ahead of schedule.",
+        "Designed and implemented hydraulic and electrical test rig for battery cooling plates.",
+        "Supported process automation and optimisation, reducing cost and lead times.",
+        "Conducted material characterisation experiments for production readiness."
+      ]
+    },
+    {
+      "name": "Various Roles",
+      "position": "Hospitality & Retail",
+      "startDate": "2017-01-01",
+      "endDate": "2025-01-01",
+      "summary": "Held various part-time and seasonal roles in retail, pubs, and hospitality across the UK, Canada, and Latin America.",
+      "highlights": [
+        "Built strong interpersonal and customer service skills.",
+        "Adapted to diverse, fast-paced working environments.",
+        "Self-funded extensive international travel through employment."
+      ]
     }
   ],
   "volunteer": [
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "organization": "North Bristol Foodbank",
+      "position": "Volunteer",
+      "startDate": "2020-01-01",
+      "endDate": "2022-01-01",
+      "summary": "Weekly volunteer supporting community food distribution."
+    },
+    {
+      "organization": "My Future Choice",
+      "position": "Volunteer",
+      "startDate": "2021-01-01",
+      "endDate": "2021-12-01",
+      "summary": "Led an outreach initiative based on the UN Sustainable Development Goals, guiding students in creating community projects."
+    },
+    {
+      "organization": "Movember",
+      "position": "University Ambassador",
+      "startDate": "2020-01-01",
+      "endDate": "2020-12-01",
+      "summary": "Coordinated Bristol University’s 2020 Movember campaign, raising £54,000 for men’s health."
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
+      "institution": "University of Bristol",
+      "area": "Engineering Design",
+      "studyType": "MEng",
+      "startDate": "2019-09-01",
+      "endDate": "2024-06-01",
+      "score": "First Class Honours",
+      "courses": [
+        "First-class theses on agrivoltaics: developed digital twin modelling solar and agricultural yields",
+        "Energy Management exam: produced consultancy framework for community home energy storage"
+      ]
+    },
+    {
+      "institution": "Wallington County Grammar School",
+      "area": "A Levels & GCSEs",
+      "studyType": "Secondary Education",
+      "startDate": "2012-09-01",
+      "endDate": "2019-06-01",
+      "score": "A Levels: 2 A*s, 1 A; GCSEs: 9 A*s, 3 As"
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
-    }
-  ],
-  "publications": [
-    {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
-    },
-    {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
-    },
-    {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "title": "First Class Honours, MEng Engineering Design",
+      "date": "2024-06-01",
+      "awarder": "University of Bristol",
+      "summary": "Graduated with First Class Honours for integrated Master’s degree in Engineering Design."
     }
   ],
   "skills": [
     {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
+      "name": "Data Analysis",
+      "keywords": ["Python", "MATLAB", "SQL", "Excel", "Energy System Modelling"]
+    },
+    {
+      "name": "Engineering & Automation",
+      "keywords": ["Prototyping", "Robotic Systems", "Automation", "CAD", "FEA"]
+    },
+    {
+      "name": "Commercial & Business Development",
+      "keywords": ["Startup Founding", "Grant Funding", "Project Management", "Financial Modelling"]
+    },
+    {
+      "name": "Communication & Teamwork",
+      "keywords": ["Stakeholder Engagement", "Presentation", "Collaboration", "Customer Service"]
     }
   ],
   "languages": [
     {
-      "language": "German",
-      "fluency": "Native speaker",
-      "icon": ""
+      "language": "English",
+      "fluency": "Native speaker"
     },
     {
-      "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
+      "language": "Spanish",
+      "fluency": "Intermediate"
     }
   ],
   "interests": [
     {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "name": "Sustainability",
+      "keywords": ["Renewable Energy", "Climate Tech", "Flexibility Markets", "Agrivoltaics"]
     },
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "Outdoors & Travel",
+      "keywords": ["Skiing", "Cycling", "Hiking", "Backpacking", "Photography"]
     }
   ]
 }
