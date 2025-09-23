@@ -3,44 +3,41 @@ layout: default
 ---
 <div class="post">
   <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
+    {% unless page.layout == "about" %}
+      <h1 class="post-title">
+        {% if site.title == 'blank' %}
+          <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+          {{ site.last_name }}
+        {% else %}
+          {{ site.title }}
+        {% endif %}
+      </h1>
+      <p class="desc">{{ page.subtitle }}</p>
+    {% endunless %}
   </header>
 
   <article>
     {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+      <section class="profile-hero-two-col">
+        <div class="profile-hero-two-col__text">
+          {{ content | markdownify }} <!-- pulls your markdown text -->
+
+          {% if page.profile.more_info %}
+            <div class="profile-hero__info">{{ page.profile.more_info }}</div>
+          {% endif %}
+        </div>
+
         {% if page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.5}}px, (min-width: 576px)
-            50vw, 95vw"{% endcapture %}
-
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
+          <div class="profile-hero-two-col__media">
+            <img src="{{ profile_image_path | relative_url }}"
+                 alt="{{ page.profile.image_alt | default: page.title | escape }}" />
+          </div>
         {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-      </div>
+      </section>
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+    <div class="clearfix"></div>
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
@@ -70,7 +67,6 @@ layout: default
     {% if page.social %}
       <div class="social">
         <div class="contact-icons">{% include social.liquid %}</div>
-
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>
     {% endif %}
@@ -80,3 +76,4 @@ layout: default
     {% endif %}
   </article>
 </div>
+
