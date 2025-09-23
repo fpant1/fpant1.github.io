@@ -29,9 +29,11 @@ latest_posts:
 
 # Welcome  
 
-I’m Frank, a recent Master’s graduate in Engineering Design with a passion for sustainability, innovation, and problem-solving — especially where they come together to tackle real-world challenges. Over the past year I’ve travelled widely, gaining new perspectives and experiences that shape how I approach both work and life. Check out my blog on this.
+I’m Frank, a recent Master’s graduate in Engineering Design — welcome to my site, where you can explore the projects, experiences, and ideas I’ve been working on.
 
-On this site you’ll find my projects, blogs, and ideas at the intersection of engineering, data, and business, as well as a glimpse into the journeys and interests that drive me.  
+<!-- with a passion for sustainability, innovation, and problem-solving — especially where they come together to tackle real-world challenges. Over the past year I’ve travelled widely, gaining new perspectives and experiences that shape how I approach both work and life. Check out my blog on this. -->
+
+<!-- On this site you’ll find my projects, blogs, and ideas at the intersection of engineering, data, and business, as well as a glimpse into the journeys and interests that drive me.   -->
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
