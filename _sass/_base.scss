@@ -241,16 +241,13 @@ ul.task-list input[type="checkbox"] {
 //   }
 // }
 // Profile
-
-
 .profile {
   width: 100%;
   max-width: 350px; // cap size on desktop
   margin: 0 20px 20px 0;
 
   .more-info {
-    margin-bottom: 5px;
-    margin-top: 5px;
+    margin: 5px 0;
     font-family: monospace;
 
     p {
@@ -271,13 +268,11 @@ ul.task-list input[type="checkbox"] {
 /* Desktop & tablets */
 @media (min-width: 576px) {
   .profile {
-    width: 40%; // wider on desktop
+    width: 40%;
     max-width: 350px;
 
-    .address {
-      p {
-        display: block;
-      }
+    .address p {
+      display: block;
     }
   }
 }
@@ -285,10 +280,10 @@ ul.task-list input[type="checkbox"] {
 /* Mobile adjustments */
 @media (max-width: 575.98px) {
   .profile {
-    width: 100%;     // take full width on small screens
-    max-width: 100%; // don’t constrain size
-    float: none;     // stack above text
-    margin: 0 auto 20px auto; // centre it
+    width: 100%;
+    max-width: 100%;
+    float: none;
+    margin: 0 auto 20px auto;
   }
 }
 
@@ -310,10 +305,17 @@ ul.task-list input[type="checkbox"] {
 .profile-hero-two-col {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 100vw;                  // full viewport width
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%); // break out of centralised container
   height: 100vh;
   min-height: 60vh;
   overflow: hidden;
+
+  @media (max-width: 767.98px) {
+    flex-direction: column-reverse; // image below text on mobile
+    height: auto;
+  }
 }
 
 .profile-hero-two-col__text {
@@ -323,61 +325,46 @@ ul.task-list input[type="checkbox"] {
   flex-direction: column;
   justify-content: center;
   text-align: left;
-}
 
-.profile-hero-two-col__text .profile-hero__name {
-  font-size: clamp(2rem, 4vw, 3.6rem);
-  font-weight: 700;
-  margin-bottom: 1rem;
-  line-height: 1.1;
-}
-
-.profile-hero-two-col__text .profile-hero__info {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  line-height: 1.45;
-  opacity: 0.95;
-}
-
-/* Right-side image */
-.profile-hero-two-col__media {
-  flex: 1;
-  position: relative;
-}
-
-.profile-hero-two-col__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-/* Mobile adjustments: stack columns */
-@media (max-width: 767.98px) {
-  .profile-hero-two-col {
-    flex-direction: column-reverse; /* image below text */
-    height: auto;
+  @media (max-width: 1199px) {
+    padding: 2rem;
   }
 
-  .profile-hero-two-col__text {
-    padding: 2rem;
+  @media (max-width: 767.98px) {
     text-align: center;
   }
 
-  .profile-hero-two-col__media {
-    height: 50vh; /* or whatever looks good on phones */
+  .profile-hero__name {
+    font-size: clamp(2rem, 4vw, 3.6rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+
+  .profile-hero__info {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.45;
+    opacity: 0.95;
   }
 }
-.profile-hero-two-col {
-  width: 100vw; /* full viewport width */
-  max-width: 100vw;
-  margin-left: calc(-50vw + 50%); /* break out of centralised container */
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-  min-height: 60vh;
-  overflow: hidden;
+
+.profile-hero-two-col__media {
+  flex: 1;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  @media (max-width: 767.98px) {
+    height: 50vh; // adjust for mobile
+  }
 }
+
 
 
 // Navbar customization
