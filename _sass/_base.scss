@@ -361,7 +361,7 @@ ul.task-list input[type="checkbox"] {
 
   img {
     max-width: 85%;
-    max-height: 90vh;     /* shrink slightly to avoid overflow */
+    max-height: 70vh;     /* shrink slightly to avoid overflow */
     height: auto;
     object-fit: contain;
     border-radius: 8px;
@@ -399,7 +399,11 @@ h3 { font-size: 1.5rem; }
 }
 
 
-
+/* Reduce the top spacing of elements with .t-5 or .my-5 */
+.t-5,
+.my-5 {
+  margin-top: 0 !important; /* or 0 if you want none */
+}
 
 // Navbar customization
 
