@@ -22,39 +22,64 @@
 
 // Adjust header spacing if needed
 .header-bar {
-  padding-top: 1rem;   // shrink the top padding
+  padding-top: 1rem;    // shrink the top padding
   padding-bottom: 2rem; // shrink bottom padding
 }
 
 // ---- Hero section tweaks ----
 .profile-hero-two-col {
-  margin-top: -3rem;   // move hero closer to top bar
+  margin-top: -3rem;    // move hero closer to top bar
 }
 
 .profile-hero-two-col__text {
-  padding-top: 1rem;    // optional tweak for tighter spacing
+  padding-top: 1rem;    // tighter vertical spacing inside hero text
   padding-bottom: 1rem;
 }
 
 .profile-hero-two-col__media {
-  padding-right: 1rem;  // optional tweak for more compact spacing
-
+  padding-right: 1rem;  // add slight space on right
   img {
-    max-height: 65vh;   // shrink image slightly to fit higher
+    max-height: 65vh;   // shrink image slightly so whole hero fits above the fold
   }
 }
 
 // ---- Typography overrides ----
-body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 1.6;
+// ---- Typography overrides ----
+
+// Hero heading (H1 in landing two-column section)
+.profile-hero-two-col__text h1,
+.profile-hero__name {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.75rem, 6vw, 5.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--global-text-color);  // ✅ theme-aware text colour
+  margin-bottom: 1rem;
 }
 
-h1 { font-size: 2.5rem; }  // ~40px
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
+// Hero body text under H1y
 
-// ---- Additional minor tweaks ----
-// Add any future overrides here
+.profile-hero-two-col__text p,
+.profile-hero__info {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--global-text-color);  // ✅ theme-aware text colour
+  max-width: 60ch;
+  margin-bottom: 1rem;
+}
+
+// Navigation bar
+.navbar,
+.navbar a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--global-text-color);  // ✅ normal nav text follows theme
+}
+
+.navbar a:hover {
+  color: var(--global-theme-color); // ✅ accent colour on hover
+}
