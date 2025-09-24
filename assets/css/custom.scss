@@ -1,0 +1,60 @@
+// _custom.scss
+// ----------------------------
+// Overrides and custom tweaks
+// ----------------------------
+
+// ---- Layout tweaks ----
+
+// Remove automatic horizontal centring
+.container,
+.main-content,
+.page-content {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important; // optional: full-width container
+}
+
+// Reduce top spacing of elements with .t-5 or .my-5
+.t-5,
+.my-5 {
+  margin-top: 0 !important;
+}
+
+// Adjust header spacing if needed
+.header-bar {
+  padding-top: 1rem;   // shrink the top padding
+  padding-bottom: 2rem; // shrink bottom padding
+}
+
+// ---- Hero section tweaks ----
+.profile-hero-two-col {
+  margin-top: -3rem;   // move hero closer to top bar
+}
+
+.profile-hero-two-col__text {
+  padding-top: 1rem;    // optional tweak for tighter spacing
+  padding-bottom: 1rem;
+}
+
+.profile-hero-two-col__media {
+  padding-right: 1rem;  // optional tweak for more compact spacing
+
+  img {
+    max-height: 65vh;   // shrink image slightly to fit higher
+  }
+}
+
+// ---- Typography overrides ----
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+h1 { font-size: 2.5rem; }  // ~40px
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+// ---- Additional minor tweaks ----
+// Add any future overrides here
