@@ -19,14 +19,22 @@ layout: default
   <article>
     {% if page.profile %}
       <section class="profile-hero-two-col">
+        <!-- Left text column -->
         <div class="profile-hero-two-col__text">
-          {{ content | markdownify }} <!-- pulls your markdown text -->
+          <div class="text-wrapper">
+            {{ content | markdownify }}
 
-          {% if page.profile.more_info %}
-            <div class="profile-hero__info">{{ page.profile.more_info }}</div>
+            {% if page.profile.more_info %}
+              <div class="profile-hero__info">{{ page.profile.more_info }}</div>
+            {% endif %}
+          </div>
+
+          {% if page.social %}
+            <div class="contact-icons">{% include social.liquid %}</div>
           {% endif %}
         </div>
 
+        <!-- Right media column -->
         {% if page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
           <div class="profile-hero-two-col__media">
@@ -63,17 +71,8 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
-
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}
     {% endif %}
   </article>
 </div>
-

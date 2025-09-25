@@ -1,85 +1,367 @@
-// _custom.scss
+// // _custom.scss
+// // ----------------------------
+// // Overrides and custom tweaks
+// // ----------------------------
+
+// // ---- Layout tweaks ----
+
+// // Remove automatic horizontal centring
+// .container,
+// .main-content,
+// .page-content {
+//   margin-left: 0 !important;
+//   margin-right: 0 !important;
+//   max-width: 100% !important; // optional: full-width container
+// }
+
+// // Reduce top spacing of elements with .t-5 or .my-5
+// .t-5,
+// .my-5 {
+//   margin-top: 0 !important;
+// }
+
+// // Adjust header spacing if needed
+// .header-bar {
+//   padding-top: 1rem;    // shrink the top padding
+// //   padding-bottom: 2rem; // shrink bottom padding
+// }
+
+// /* ----------------------------
+//    Compact header bar
+//    ---------------------------- */
+// .header-bar {
+//     padding-top: 0.25rem;    // very small top padding
+//     padding-bottom: 0.25rem; // very small bottom padding
+//     min-height: auto;         // let padding define height
+//     line-height: 1.2;         // tighter line height for text
+// }
+  
+
+// /* ----------------------------
+//    Profile Hero Two-Column Custom Tweaks
+//    ---------------------------- */
+
+//    .profile-hero-two-col {
+//     display: flex;
+//     flex-direction: row;
+//     width: 100vw;
+//     max-width: 100vw;
+//     margin-left: calc(-50vw + 50%);
+//     margin-right: calc(-50vw + 50%);
+//     height: 100vh;       // full-screen hero
+//     min-height: 60vh;
+//     overflow: hidden;
+//     margin-top: -2rem;   // slight upward shift
+  
+//     @media (max-width: 767.98px) {
+//       flex-direction: column-reverse; // text above image
+//       height: auto;
+//       margin-left: 0;
+//       margin-right: 0;
+//       width: 100%;
+//       margin-top: -1rem; // smaller shift on mobile
+//     }
+//   }
+  
+//   /* Text column */
+//   .profile-hero-two-col__text {
+//     flex: 1 1 60%;   // text = 60% width
+//     padding: 1rem 2rem;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+  
+//     @media (max-width: 1199px) {
+//       padding: 1rem 1.5rem;
+//     }
+  
+//     @media (max-width: 767.98px) {
+//       text-align: center;
+//       padding: 1rem 1rem;
+//     }
+  
+//     .profile-hero__name {
+//       font-size: clamp(2rem, 4vw, 3.6rem);
+//       font-weight: 700;
+//       margin-bottom: 0.75rem;
+//       line-height: 1.1;
+//     }
+  
+//     .profile-hero__info {
+//       font-size: clamp(1rem, 2vw, 1.25rem);
+//       line-height: 1.4;
+//       opacity: 0.95;
+//     }
+//   }
+  
+//   /* Image column */
+//   .profile-hero-two-col__media {
+//     flex: 1 1 40%;   // image = 40% width
+//     position: relative;
+//     padding-right: 1rem;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+  
+//     img {
+//       width: 100%;
+//       height: auto;
+//       max-height: 90vh;  // slightly smaller to avoid overflow
+//       object-fit: cover;
+//       border-radius: 8px;
+//     }
+  
+//     @media (max-width: 767.98px) {
+//       padding-right: 0;
+  
+//       img {
+//         max-width: 100%;
+//         max-height: 50vh;
+//         border-radius: 0;
+//       }
+//     }
+//   }
+  
+//   /* Optional: adjust container margins if needed */
+//   .container,
+//   .main-content,
+//   .page-content {
+//     margin-left: 0 !important;
+//     margin-right: 0 !important;
+//     max-width: 100% !important;
+//   }
+  
+//   /* Optional: reduce top spacing of elements with .t-5 or .my-5 */
+//   .t-5,
+//   .my-5 {
+//     margin-top: 0 !important;
+//   }
+  
+  
+  
+// // ---- Typography overrides ----
+// // ---- Typography overrides ----
+
+// // Hero heading (H1 in landing two-column section)
+// .profile-hero-two-col__text h1,
+// .profile-hero__name {
+//   font-family: 'Raleway', sans-serif;
+//   font-weight: 700;
+//   font-size: clamp(2.75rem, 6vw, 5.5rem);
+//   line-height: 1.05;
+//   letter-spacing: -0.02em;
+//   color: var(--global-text-color);  // ✅ theme-aware text colour
+//   margin-bottom: 1rem;
+// }
+
+// // Hero body text under H1y
+
+// .profile-hero-two-col__text p,
+// .profile-hero__info {
+//   font-family: 'Roboto', sans-serif;
+//   font-weight: 300;
+//   font-size: 1.25rem;
+//   line-height: 1.6;
+//   color: var(--global-text-color);  // ✅ theme-aware text colour
+//   max-width: 60ch;
+//   margin-bottom: 1rem;
+// }
+
+// // Navigation bar
+// .navbar,
+// .navbar a {
+//   font-family: 'Roboto', sans-serif;
+//   font-size: 1rem;
+//   font-weight: 400;
+//   color: var(--global-text-color);  // ✅ normal nav text follows theme
+// }
+
+// .navbar a:hover {
+//   color: var(--global-theme-color); // ✅ accent colour on hover
+// }
+
+
+// /* Landing page name in header */
+// body .navbar-brand.landing-title {
+//     font-size: 3rem;      /* adjust size */
+//     font-weight: bold;
+//     text-align: left;
+//     padding-left: 0;
+//     display: block;       /* ensures it’s on its own line */
+//   }
+// ============================
+// Custom SCSS Overrides
+// ============================
+// ---- Layout Tweaks ----
+
 // ----------------------------
-// Overrides and custom tweaks
+// Custom overrides (_custom.scss)
 // ----------------------------
 
-// ---- Layout tweaks ----
-
-// Remove automatic horizontal centring
+// ---- Full-width containers ----
 .container,
 .main-content,
 .page-content {
   margin-left: 0 !important;
   margin-right: 0 !important;
-  max-width: 100% !important; // optional: full-width container
+  max-width: 100% !important;
 }
 
-// Reduce top spacing of elements with .t-5 or .my-5
+// Reduce top spacing for .t-5 or .my-5
 .t-5,
 .my-5 {
   margin-top: 0 !important;
 }
 
-// Adjust header spacing if needed
+// ---- Header Styling ----
 .header-bar {
-  padding-top: 1rem;    // shrink the top padding
-  padding-bottom: 2rem; // shrink bottom padding
+  padding-top: 1rem;       // more breathing room
+  padding-bottom: 0.75rem;
+  min-height: auto;
 }
 
-// ---- Hero section tweaks ----
+.navbar,
+.navbar-brand,
+.navbar a {
+  line-height: 1.2;        // slightly taller
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;         // slightly bigger
+}
+
+// Landing page name in header
+body .navbar-brand.landing-title {
+  font-size: 3.25rem;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 0;
+  display: block;
+}
+
+// ---- Hero Section (Two Columns) ----
 .profile-hero-two-col {
-  margin-top: -3rem;    // move hero closer to top bar
-}
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  height: 100vh;
+  min-height: 60vh;
+  overflow: hidden;
+  margin-top: -2rem;
 
-.profile-hero-two-col__text {
-  padding-top: 1rem;    // tighter vertical spacing inside hero text
-  padding-bottom: 1rem;
-}
-
-.profile-hero-two-col__media {
-  padding-right: 1rem;  // add slight space on right
-  img {
-    max-height: 65vh;   // shrink image slightly so whole hero fits above the fold
+  @media (max-width: 767.98px) {
+    flex-direction: column-reverse;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    margin-top: -1rem;
   }
 }
 
-// ---- Typography overrides ----
-// ---- Typography overrides ----
+// ---- Left text column overrides ----
+.profile-hero-two-col__text {
+    flex: 0 0 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  // start from top
+    align-items: flex-start;      // left-align
+    padding: 60vh 3rem 2rem 3rem; // push text roughly 60% down viewport
 
-// Hero heading (H1 in landing two-column section)
-.profile-hero-two-col__text h1,
-.profile-hero__name {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: clamp(2.75rem, 6vw, 5.5rem);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  color: var(--global-text-color);  // ✅ theme-aware text colour
-  margin-bottom: 1rem;
+    // Inner wrapper to limit text width and override base body styles
+    .text-wrapper {
+      max-width: 30ch;          
+      text-align: left;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 30px;          
+      line-height: 1.6;
+      color: var(--global-text-color);
+    }
+
+    @media (max-width: 1199px) {
+      padding: 50vh 2rem 1.5rem 2rem;
+    }
+
+    @media (max-width: 767.98px) {
+      width: 100%;
+      padding: 30vh 1rem 1.5rem 1rem;
+
+      .text-wrapper {
+        max-width: 100%;
+        text-align: center;
+        font-size: 22px;      
+      }
+    }
+
+    .profile-hero__name {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      font-size: clamp(2.75rem, 6vw, 5.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      color: var(--global-text-color);
+    }
+
+    .profile-hero__info {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 1.25rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: var(--global-text-color);
+    }
+
+    .contact-icons {
+      margin-top: auto;       
+      font-size: 2rem;        // bigger icons
+      color: #000;            
+    }
+
+    .contact-icons a {
+      color: #000;            
+    }
 }
 
-// Hero body text under H1y
+// ---- Right media column ----
+.profile-hero-two-col__media {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
 
-.profile-hero-two-col__text p,
-.profile-hero__info {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 1.25rem;
-  line-height: 1.6;
-  color: var(--global-text-color);  // ✅ theme-aware text colour
-  max-width: 60ch;
-  margin-bottom: 1rem;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0; // no rounded corners
+  }
+
+  @media (max-width: 767.98px) {
+    width: 100%;
+    padding-left: 0;
+
+    img {
+      max-width: 100%;
+      max-height: 50vh;
+      height: auto;
+    }
+  }
 }
 
-// Navigation bar
+// ---- Navigation ----
 .navbar,
 .navbar a {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: var(--global-text-color);  // ✅ normal nav text follows theme
+  color: var(--global-text-color);
 }
 
 .navbar a:hover {
-  color: var(--global-theme-color); // ✅ accent colour on hover
+  color: var(--global-theme-color);
 }

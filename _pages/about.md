@@ -27,9 +27,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-# Welcome  
+<!-- # Welcome   -->
 
-I’m Frank, a recent Master’s graduate in Engineering Design — welcome to my site, where you can explore the projects, experiences, and ideas I’ve been working on.
+A recent Master’s graduate in Engineering Design, passionate about helping people and the planet. Welcome to my site, where you can explore the projects, experiences, and ideas I’ve been working on.
 
 <!-- with a passion for sustainability, innovation, and problem-solving — especially where they come together to tackle real-world challenges. Over the past year I’ve travelled widely, gaining new perspectives and experiences that shape how I approach both work and life. Check out my blog on this. -->
 
