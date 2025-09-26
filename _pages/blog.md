@@ -26,6 +26,12 @@ nav_order: 1
       {% assign year = post.date | date: "%Y" %}
 
       <li>
+        {% if post.thumbnail %}
+          <a href="{{ post.url | relative_url }}">
+            <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.title }}" class="post-thumbnail">
+          </a>
+        {% endif %}
+
         <h3>
           {% if post.redirect == blank %}
             <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>

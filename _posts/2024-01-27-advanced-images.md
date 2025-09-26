@@ -3,7 +3,7 @@ layout: post
 title: Travels 2024–2025
 date: 2025-09-26 11:46:00
 description: November 2024 - August 2025 Travels
-thumbnail: assets/img/canada/canada_1.jpg
+thumbnail: "assets/img/canada/canada_1.jpg"
 images:
   compare: true
   slider: true
