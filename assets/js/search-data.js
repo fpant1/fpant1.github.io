@@ -44,7 +44,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-a-post-with-image-galleries",
+            },{id: "post-travels-2024-2025",
+        
+          title: "Travels 2024–2025",
+        
+        description: "November 2024 - August 2025 Travels",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/advanced-images/";
+          
+        },
+      },{id: "post-a-post-with-image-galleries",
         
           title: "a post with image galleries",
         
@@ -53,17 +64,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2024/photo-gallery/";
-          
-        },
-      },{id: "post-a-post-with-advanced-image-components",
-        
-          title: "a post with advanced image components",
-        
-        description: "this is what advanced image components could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/advanced-images/";
           
         },
       },{id: "post-a-distill-style-blog-post",
@@ -86,17 +86,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2015/images/";
-          
-        },
-      },{id: "post-a-post-with-formatting-and-links",
-        
-          title: "a post with formatting and links",
-        
-        description: "march &amp; april, looking forward to summer",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2015/formatting-and-links/";
           
         },
       },{id: "books-the-godfather",
