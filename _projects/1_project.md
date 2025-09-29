@@ -8,7 +8,7 @@ category: work
 related_publications: true
 ---
 
-I wanted a better location to showcase and visualise the projects I’ve been working on, while also using it as an exercise to gain web development experience.  
+I wanted a better location to showcase and visualise the projects I’ve been working on, while also using it as an exercise to gain web development experience with css and html.  
 
 The site is hosted using **GitHub Pages** — you can find the repository here:  
 [fpant1.github.io](https://github.com/fpant1/fpant1.github.io)  
