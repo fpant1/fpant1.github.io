@@ -1,10 +1,11 @@
 ---
-layout: default
+layout: blog
 permalink: /blog/
 title: blog
 nav: true
 nav_order: 1
 ---
+
 
 <div class="post blog-list">
 

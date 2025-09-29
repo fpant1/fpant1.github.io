@@ -22,20 +22,24 @@
     {% include header.liquid %}
 
     <!-- Content -->
-    <div class="container mt-5" role="main">
+    <div class="container mt-5 
+                {% if page.layout == 'about' %} about-container{% endif %}
+                {% if page.layout == 'blog' %} blog-container{% endif %}" 
+         role="main">
+
       {% if page.toc and page.toc.sidebar %}
         {% if page.toc.sidebar == 'right' %}
           <div class="row">
             <!-- main content area -->
             <div class="col-sm-9">{{ content }}</div>
-            <!-- sidebar, which will move to the top on a small screen -->
+            <!-- sidebar -->
             <div class="col-sm-3">
               <nav id="toc-sidebar" class="sticky-top"></nav>
             </div>
           </div>
         {% else %}
           <div class="row">
-            <!-- sidebar, which will move to the top on a small screen -->
+            <!-- sidebar -->
             <div class="col-sm-3">
               <nav id="toc-sidebar" class="sticky-top"></nav>
             </div>
@@ -55,3 +59,4 @@
     {% include scripts.liquid %}
   </body>
 </html>
+
