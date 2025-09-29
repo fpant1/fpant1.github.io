@@ -322,7 +322,227 @@
 //     width: 100% !important;
 //   }
 // }
-// ---- Full-width containers override ----
+
+// // -------------------------------------------------------------------------------------
+
+
+// // ---- Full-width containers override ----
+// .profile-hero-container,
+// .profile-hero-two-col {
+//   width: 100% !important;
+//   max-width: 100% !important;
+//   margin: 0 !important;
+//   padding: 0 !important;
+//   box-sizing: border-box !important;
+// }
+
+// // ---- Header Styling ----
+// .header-bar {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 1rem 3rem;
+//   min-height: auto;
+// }
+
+// .navbar {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   width: 100%;
+// }
+
+// // Landing page name top-left
+// body .navbar-brand.landing-title {
+//   font-size: 3.25rem;
+//   font-weight: bold;
+//   text-align: left;
+//   padding-left: 0;
+//   display: block;
+// }
+
+// // Right-hand nav
+// .navbar-right-half {
+//   display: flex;
+//   justify-content: flex-end;
+//   flex: 1;
+// }
+
+// .navbar-right-half .navbar-collapse {
+//   width: 100%;
+// }
+
+// .navbar-nav {
+//   display: flex;
+//   justify-content: space-between;
+//   width: 100%;
+// }
+
+// .navbar-nav .nav-item {
+//   flex: 1;
+//   text-align: center;
+// }
+
+// .navbar-nav .nav-link {
+//   font-size: 1.25rem;
+//   font-weight: 300;
+//   color: var(--global-text-color);
+//   padding-left: 0;
+//   padding-right: 0;
+// }
+
+// .navbar a {
+//   font-family: 'Inter', sans-serif;
+//   font-size: 30px;
+//   font-weight: 600;
+//   color: var(--global-text-color);
+//   margin-right: 3rem;
+//   text-decoration: none;
+// }
+
+// .navbar a:last-child {
+//   margin-right: 0;
+// }
+
+// .navbar a:hover {
+//   color: var(--global-theme-color);
+// }
+
+// // ---- Hero Section (Two Columns) ----
+// .profile-hero-two-col {
+//   display: flex;
+//   flex-direction: row;
+//   width: 100vw !important;       // full viewport width
+//   height: 100vh;                 // full viewport height
+//   min-height: 60vh;
+//   margin: 0 !important;
+//   padding: 0 !important;
+//   box-sizing: border-box !important;
+//   overflow: hidden;
+// }
+
+// // Left text column
+// .profile-hero-two-col__text {
+//   flex: 0 0 60%;              // take half of viewport
+//   max-width: 60%;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   align-items: flex-start;
+//   padding: 60vh 3rem 2rem 3rem; // text starts 60% down viewport
+//   box-sizing: border-box;
+
+//   .text-wrapper {
+//     max-width: 30ch;
+//     text-align: left;
+//     font-family: 'Inter', sans-serif;
+//     font-weight: 300;
+//     font-size: 30px;
+//     line-height: 1.6;
+//     color: var(--global-text-color);
+//   }
+
+//   .profile-hero__name {
+//     font-family: 'Raleway', sans-serif;
+//     font-weight: 700;
+//     font-size: clamp(2.75rem, 6vw, 5.5rem);
+//     line-height: 1.05;
+//     letter-spacing: -0.02em;
+//     margin-bottom: 1rem;
+//     color: var(--global-text-color);
+//   }
+
+//   .profile-hero__info {
+//     font-family: 'Roboto', sans-serif;
+//     font-weight: 300;
+//     font-size: 1.25rem;
+//     line-height: 1.6;
+//     margin-bottom: 1rem;
+//     color: var(--global-text-color);
+//   }
+
+//   .contact-icons {
+//     margin-top: auto;
+//     font-size: 3rem;
+//     color: #000;
+
+//     a {
+//       color: #000;
+//     }
+//   }
+
+//   @media (max-width: 1199px) {
+//     padding: 50vh 2rem 1.5rem 2rem;
+//   }
+
+//   @media (max-width: 767.98px) {
+//     width: 100%;
+//     padding: 30vh 1rem 1.5rem 1rem;
+
+//     .text-wrapper {
+//       max-width: 100%;
+//       text-align: center;
+//       font-size: 22px;
+//     }
+//   }
+// }
+
+// // Right media column
+// .profile-hero-two-col__media {
+//   flex: 0 0 40%;             // take half of viewport
+//   max-width: 40%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding-left: 1rem;
+//   padding-right: 3rem;
+//   box-sizing: border-box;
+
+//   img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//     display: block;
+//   }
+
+//   @media (max-width: 767.98px) {
+//     width: 100%;
+//     padding-left: 0;
+//     padding-right: 0;
+
+//     img {
+//       max-width: 100%;
+//       max-height: 50vh;
+//       height: auto;
+//     }
+//   }
+// }
+
+// // ---- Responsive stacking for small screens ----
+// @media (max-width: 767.98px) {
+//   .profile-hero-two-col {
+//     flex-direction: column-reverse;
+//   }
+
+//   .profile-hero-two-col__text,
+//   .profile-hero-two-col__media {
+//     flex: 0 0 100%;
+//     max-width: 100%;
+//     padding-left: 1rem !important;
+//     padding-right: 1rem !important;
+//   }
+// }
+
+
+// ---------------------------------
+
+
+// -------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------
+// custom.scss  (replace the existing custom.scss with this)
+// -------------------------------------------------------------------------------------
+
+// ---- Full-width containers override for hero only ----
 .profile-hero-container,
 .profile-hero-two-col {
   width: 100% !important;
@@ -332,7 +552,7 @@
   box-sizing: border-box !important;
 }
 
-// ---- Header Styling ----
+/* ---- Header Styling ---- */
 .header-bar {
   display: flex;
   justify-content: space-between;
@@ -348,7 +568,7 @@
   width: 100%;
 }
 
-// Landing page name top-left
+/* Landing page name top-left */
 body .navbar-brand.landing-title {
   font-size: 3.25rem;
   font-weight: bold;
@@ -357,15 +577,15 @@ body .navbar-brand.landing-title {
   display: block;
 }
 
-// Right-hand nav
+/* Right-hand nav */
 .navbar-right-half {
   display: flex;
   justify-content: flex-end;
-  flex: 1;
+  flex: 0.7;
 }
 
 .navbar-right-half .navbar-collapse {
-  width: 100%;
+  width:50%;
 }
 
 .navbar-nav {
@@ -404,28 +624,55 @@ body .navbar-brand.landing-title {
   color: var(--global-theme-color);
 }
 
-// ---- Hero Section (Two Columns) ----
+/* -----------------------------------------------------------------
+   HERO: robust full-bleed layout (works across different grid/container rules)
+   - Uses width:100vw and viewport-centering calc() (safe and predictable)
+   - Ensures children can shrink/grow appropriately (min-width:0)
+   - Avoids negative left offsets that get clipped by transformed ancestors
+   ----------------------------------------------------------------- */
 .profile-hero-two-col {
   display: flex;
   flex-direction: row;
-  width: 100vw !important;       // full viewport width
-  height: 100vh;                 // full viewport height
+  /* Make the hero full-bleed relative to the viewport */
+  width: 100vw !important;
+  max-width: none !important;
+  /* center the full-bleed element relative to viewport (works inside centered containers) */
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+
+  height: 100vh;        /* full viewport height */
   min-height: 60vh;
-  margin: 0 !important;
   padding: 0 !important;
   box-sizing: border-box !important;
-  overflow: hidden;
+  overflow: visible !important; /* allow children to be visible and not be clipped */
+  position: relative !important;
 }
 
-// Left text column
+/* Ensure the hero parent (.post) won't clip the hero - only when hero is present */
+.post {
+  /* setting this globally to .post may affect other sections, but it is minimal:
+     it only ensures hero can overflow horizontally when present. If you prefer, you
+     can scope it to `.post.home` or `.post.about` depending on your page classes. */
+  overflow-x: visible !important;
+}
+
+/* Prevent flex children from collapsing (common cause of "thin columns") */
+.profile-hero-two-col__text,
+.profile-hero-two-col__media {
+  min-width: 0;     /* allows flex-basis to work correctly and children to shrink */
+  box-sizing: border-box;
+}
+
+/* Left text column (60%) */
 .profile-hero-two-col__text {
-  flex: 0 0 60%;              // take half of viewport
-  max-width: 60%;
+  flex: 0 0 60% !important;
+  max-width: 60% !important;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 60vh 3rem 2rem 3rem; // text starts 60% down viewport
+  /* push content down ~60% of viewport height */
+  padding: 60vh 3rem 2rem 3rem;
   box-sizing: border-box;
 
   .text-wrapper {
@@ -483,48 +730,86 @@ body .navbar-brand.landing-title {
   }
 }
 
-// Right media column
+/* Right media column (40%) */
 .profile-hero-two-col__media {
-  flex: 0 0 40%;             // take half of viewport
-  max-width: 40%;
+  flex: 0 0 40% !important;
+  max-width: 40% !important;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-left: 1rem;
   padding-right: 3rem;
   box-sizing: border-box;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  @media (max-width: 767.98px) {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-
-    img {
-      max-width: 100%;
-      max-height: 50vh;
-      height: auto;
-    }
-  }
+  min-width: 0;
 }
 
-// ---- Responsive stacking for small screens ----
+.profile-hero-two-col__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-width: 0;
+}
+
+/* Mobile stacking */
 @media (max-width: 767.98px) {
   .profile-hero-two-col {
     flex-direction: column-reverse;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .profile-hero-two-col__text,
   .profile-hero-two-col__media {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
+
+  .profile-hero-two-col__media img {
+    max-height: 50vh;
+    height: auto;
+  }
+}
+
+/* ---- Blog listing: centred column (only affects pages where you add class "post blog-list") ---- */
+.post.blog-list {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.post.blog-list .post-list li {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.post.blog-list .post-list li h3,
+.post.blog-list .post-list li p,
+.post.blog-list .post-meta,
+.post.blog-list .post-tags {
+  text-align: left;
+}
+
+.post.blog-list .header-bar h1,
+.post.blog-list .header-bar h2 {
+  text-align: center;
+}
+
+.post.blog-list .post-thumbnail {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Safety: prevent tiny horizontal scrollbars */
+html, body {
+  overflow-x: hidden !important;
 }
