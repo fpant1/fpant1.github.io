@@ -6,7 +6,7 @@ nav: true
 nav_order: 1
 ---
 
-<div class="post">
+<div class="post blog-list">
 
   {% assign blog_name_size = site.blog_name | size %}
   {% assign blog_description_size = site.blog_description | size %}
