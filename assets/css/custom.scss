@@ -1055,3 +1055,38 @@ body .blog-container .post-thumbnail {
     padding: 2rem 0;
     box-sizing: border-box !important;
 }
+
+
+/* Shared article/page container */
+.post-wrapper,
+.page-wrapper {
+  max-width: 70%;       /* Take up about 70% of viewport */
+  max-width: 850px;     /* Don’t let it get too wide on desktops */
+  margin: 0 auto;       /* Centre horizontally */
+  padding: 2rem 1rem;   /* Breathing space */
+}
+
+/* Ensure project wrapper matches */
+.projects-wrapper {
+  max-width: 1200px;   /* Can stay full width if you like */
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Keep content (images, sliders, iframes) scaled within wrapper */
+.post-wrapper img,
+.page-wrapper img,
+.post-wrapper iframe,
+.page-wrapper iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+}
+
+/* If sliders or wide embeds are used, make sure they fit */
+.post-wrapper .slider,
+.page-wrapper .slider {
+  max-width: 100%;
+  margin: 0 auto;
+}
