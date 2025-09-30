@@ -62,6 +62,16 @@ ninja.data = [{
           description: "Building a portfolio site to showcase projects and practice web development.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
+            },},{id: "projects-automated-job-application-tracker",
+          title: 'Automated Job Application Tracker',
+          description: "Using automation tools and AI to streamline job application tracking.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_project/";
+            },},{id: "projects-agrivoltaic-simulation",
+          title: 'Agrivoltaic Simulation',
+          description: "Simulation and Design Optimisation Model for Agrivoltaics",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_project/";
             },},{
         id: 'social-email',
         title: 'email',
