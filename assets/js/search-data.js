@@ -72,6 +72,11 @@ ninja.data = [{
           description: "Simulation and Design Optimisation Model for Agrivoltaics",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
+            },},{id: "projects-canopy-guide",
+          title: 'Canopy Guide',
+          description: "A tool for optimised path planning for sustainable forestry and agriculture, using satellite image analysis.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_project/";
             },},{
         id: 'social-email',
         title: 'email',
