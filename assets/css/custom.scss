@@ -1090,3 +1090,22 @@ body .blog-container .post-thumbnail {
   max-width: 100%;
   margin: 0 auto;
 }
+
+
+/* Add vertical spacing between project cards */
+.projects-container .row {
+  row-gap: 2rem; /* Adds consistent vertical gap between rows (Bootstrap 5 supports this) */
+}
+
+/* Optional: give each project card a bit of breathing room */
+.projects-container .col,
+.projects-container [class*="col-"] {
+  margin-bottom: 2rem; /* Fallback for older Bootstrap versions */
+}
+
+
+.projects-container .card img {
+  height: 300px;         /* or whatever fixed height works */
+  object-fit: cover;     /* ensures image scales without distortion */
+  width: 100%;
+}
