@@ -1,0 +1,17 @@
+<picture class="site-media">
+  {% if include.poster %}
+    <source media="(prefers-reduced-motion: reduce)" srcset="{{ include.poster | relative_url }}">
+  {% endif %}
+  <img
+    src="{{ include.path | relative_url }}"
+    alt="{{ include.alt | default: '' | escape }}"
+    {% if include.width %}
+      width="{{ include.width }}"
+    {% endif %}
+    {% if include.height %}
+      height="{{ include.height }}"
+    {% endif %}
+    loading="{{ include.loading | default: 'lazy' }}"
+    decoding="async"
+  >
+</picture>

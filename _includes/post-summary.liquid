@@ -1,0 +1,22 @@
+{% assign post = include.post %}
+{% assign post_url = post.url | relative_url %}
+{% if post.redirect contains '://' %}
+  {% assign post_url = post.redirect %}
+{% elsif post.redirect and post.redirect != true %}
+  {% assign post_url = post.redirect | relative_url %}
+{% endif %}
+<article class="post-summary">
+  {% if post.thumbnail %}
+    <a class="post-summary__image" href="{{ post_url }}" tabindex="-1" aria-hidden="true">
+      {% include media.liquid path=post.thumbnail alt='' %}
+    </a>
+  {% endif %}
+  <h2>
+    <a href="{{ post_url }}">{{ post.title }}</a>
+  </h2>
+  <p>{{ post.description }}</p>
+  <p class="post-meta">
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }}</time> ·
+    {{ post.content | number_of_words | divided_by: 180 | plus: 1 }} min read
+  </p>
+</article>

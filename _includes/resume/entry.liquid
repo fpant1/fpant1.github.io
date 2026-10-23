@@ -1,0 +1,44 @@
+{% assign entry = include.entry %}
+{% assign entry_title = entry.position | default: entry.studyType | default: entry.title | default: entry.name %}
+<article class="resume-entry">
+  <h3>
+    {% if entry.url and entry.url != '' -%}
+      <a href="{{ entry.url }}">{{ entry_title }}</a>
+    {%- else -%}
+      {{- entry_title -}}
+    {%- endif %}
+  </h3>
+  <p>
+    {{
+      entry.institution
+      | default: entry.organization
+      | default: entry.awarder
+      | default: entry.issuer
+      | default: entry.publisher
+      | default: entry.name
+    -}}
+    {%- if entry.area %} — {{ entry.area }}{% endif %}
+  </p>
+  {% if entry.startDate %}
+    <p class="resume-date">
+      {{ entry.startDate | date: '%b %Y' }} –
+      {% if entry.endDate and entry.endDate != '' %}{{ entry.endDate | date: '%b %Y' }}{% else %}Present{% endif %}
+    </p>
+  {% elsif entry.date %}
+    <p class="resume-date">{{ entry.date | date: '%b %Y' }}</p>
+  {% endif %}
+  {% if entry.summary %}
+    <p>{{ entry.summary }}</p>
+  {% endif %}
+  {% if entry.score %}
+    <p>{{ entry.score }}</p>
+  {% endif %}
+  {% assign highlights = entry.highlights | default: entry.courses %}
+  {% if highlights.size > 0 %}
+    <ul>
+      {% for highlight in highlights %}
+        <li>{{ highlight }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</article>

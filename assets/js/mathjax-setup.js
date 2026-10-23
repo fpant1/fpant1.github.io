@@ -10,7 +10,7 @@ window.MathJax = {
     renderActions: {
       addCss: [
         200,
-        function (doc) {
+        function (_doc) {
           const style = document.createElement("style");
           style.innerHTML = `
           .mjx-container {

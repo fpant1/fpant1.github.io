@@ -26,9 +26,7 @@
   .glyph,
   .debug text {
     /** font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; **/
-    font-family:
-      Iosevka Fixed,
-      monospace;
+    font-family: "Iosevka Fixed", monospace;
     font-size: 3em;
     text-anchor: middle;
     alignment-baseline: central;
@@ -51,7 +49,7 @@
     stroke-width: 0.2;
     stroke-linecap: butt;
     fill: var(--global-text-color);
-    opacity: 1%;
+    opacity: 0.01;
   }
 
   polygon {
@@ -61,11 +59,12 @@
   .debug[debug="true"] polygon.inner {
     fill: var(--global-text-color);
     stroke: var(--global-text-color);
-    opacity: 5%;
+    opacity: 0.05;
   }
 
   polygon {
     stroke: var(--global-text-color);
+
     /** stroke-width: 0.2; **/
     stroke-linecap: butt;
     fill: var(--global-text-color);
@@ -73,13 +72,13 @@
 
   .debug[debug="true"] polygon,
   .debug[debug="true"] line.grid {
-    opacity: 10%;
+    opacity: 0.1;
   }
 
   .debug[debug="true"] polygon,
   .debug[debug="true"] path,
   .debug[debug="true"] circle {
-    opacity: 50%;
+    opacity: 0.5;
   }
 
   .debug[debug="true"] polygon {
@@ -95,7 +94,7 @@
 
   .debug[debug="true"] circle,
   .debug[debug="true"] path {
-    opacity: 50%;
+    opacity: 0.5;
     fill: red;
   }
 
@@ -114,14 +113,14 @@
   }
 
   .debug[debug="true"] line.part {
-    opacity: 50%;
+    opacity: 0.5;
     stroke: red;
   }
 
   .debug[debug="true"] line.center {
     stroke-width: 3;
     stroke-linecap: butt;
-    opacity: 10%;
+    opacity: 0.1;
     stroke: var(--global-text-color);
   }
 

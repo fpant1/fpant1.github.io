@@ -24,14 +24,7 @@ codeBlocks.forEach(function (codeBlock) {
       // check if code block has line numbers
       // i.e. `kramdown.syntax_highlighter_opts.block.line_numbers` set to true in _config.yml
       // or using `jekyll highlight` liquid tag with `linenos` option
-      if (codeBlock.querySelector("pre:not(.lineno)")) {
-        // get code from code block ignoring line numbers
-        var code = codeBlock.querySelector("pre:not(.lineno)").innerText.trim();
-      } else {
-        // if (codeBlock.querySelector('code')) {
-        // get code from code block when line numbers are not displayed
-        var code = codeBlock.querySelector("code").innerText.trim();
-      }
+      const code = (codeBlock.querySelector("pre:not(.lineno)") ?? codeBlock.querySelector("code")).innerText.trim();
       window.navigator.clipboard.writeText(code);
       copyButton.innerText = "Copied";
       copyButton.innerHTML = '<i class="fa-solid fa-clipboard-check"></i>';

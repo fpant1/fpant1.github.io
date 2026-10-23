@@ -1,6 +1,41 @@
 {
+  "name": "frank-panton-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frank Panton's Jekyll portfolio",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "bundle exec jekyll serve --livereload --port 4000",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "lint:js": "eslint .",
+    "lint:css": "stylelint \"_sass/**/*.scss\"",
+    "lint:config": "node scripts/check-config.mjs",
+    "lint": "npm run lint:js && npm run lint:css && npm run lint:config",
+    "check": "npm run format:check && npm run lint",
+    "test:site": "node scripts/check-site.mjs",
+    "test:ui": "playwright test",
+    "test": "npm run check && npm run build && npm run test:site && npm run test:ui",
+    "media:robot": "node scripts/optimise-robot.mjs"
+  },
   "devDependencies": {
-    "@shopify/prettier-plugin-liquid": "1.4.0",
-    "prettier": "3.1.1"
+    "@axe-core/playwright": "4.14.0",
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.64.1",
+    "@shopify/prettier-plugin-liquid": "1.11.2",
+    "cheerio": "1.2.0",
+    "eslint": "10.13.0",
+    "globals": "17.13.0",
+    "prettier": "3.9.10",
+    "purgecss": "8.0.0",
+    "sharp": "0.35.5",
+    "stylelint": "17.16.0",
+    "stylelint-config-standard-scss": "17.0.0",
+    "terser": "5.51.2",
+    "yaml": "2.9.1"
   }
 }

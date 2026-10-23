@@ -43,7 +43,11 @@ module Jekyll
     end
 
     def bust_css_cache(file_name)
-      CacheDigester.new(file_name: file_name, directory: 'assets/_sass').digest!
+      # Include the real Sass directory and entry point so stylesheet changes
+      # invalidate the browser cache. assets/_sass does not exist in this repo.
+      sources = Dir['_sass/**/*.scss'].sort + ['assets/css/main.scss', '_config.yml']
+      digest = Digest::MD5.hexdigest(sources.map { |path| File.read(path) }.join)
+      "#{file_name}?#{digest}"
     end
   end
 end

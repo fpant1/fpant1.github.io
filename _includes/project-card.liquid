@@ -1,0 +1,23 @@
+{% assign project = include.project %}
+{% assign project_url = project.url | relative_url %}
+{% if project.redirect contains '://' %}
+  {% assign project_url = project.redirect %}
+{% elsif project.redirect %}
+  {% assign project_url = project.redirect | relative_url %}
+{% endif %}
+<article class="project-card">
+  {% if project.img %}
+    <a class="project-card__image" href="{{ project_url }}" tabindex="-1" aria-hidden="true">
+      {% include media.liquid path=project.img poster=project.poster alt='' width=project.image_width height=project.image_height %}
+    </a>
+  {% endif %}
+  <div class="project-card__body">
+    <h2>
+      <a href="{{ project_url }}">{{ project.title }}</a>
+    </h2>
+    <p>{{ project.description }}</p>
+    {% if project.github and project.github != project_url -%}
+      <a href="{{ project.github }}">View source code</a>
+    {%- endif %}
+  </div>
+</article>

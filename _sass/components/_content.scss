@@ -1,0 +1,110 @@
+.page-heading {
+  margin-bottom: 2rem;
+}
+
+.page-heading h1 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+  font-weight: 400;
+  text-wrap: balance;
+}
+
+.page-description,
+.post-meta {
+  color: var(--global-text-color-light);
+}
+
+.page-content p a,
+.post-content p a,
+.profile-introduction p a,
+.site-footer a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.site-media {
+  display: block;
+}
+
+.site-media img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.page-content,
+.post-content {
+  overflow-wrap: break-word;
+}
+
+.page-content p,
+.post-content p,
+.post-summary p {
+  text-wrap: pretty;
+}
+
+.page-content :is(img, video, iframe),
+.post-content :is(img, video, iframe) {
+  max-width: 100%;
+}
+
+.post-content img,
+.page-content img {
+  height: auto;
+}
+
+.post-content figure img,
+.page-content figure img {
+  width: 100%;
+}
+
+.book-shelf-entry {
+  display: inline-block;
+  list-style: none;
+}
+
+.post-content pre,
+.page-content pre {
+  overflow-x: auto;
+}
+
+.post-content swiper-container {
+  display: block;
+  min-width: 0;
+  width: 100%;
+}
+
+.post-summaries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-summary {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.post-summary h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  text-wrap: balance;
+}
+
+.post-summary h2 a {
+  color: var(--global-text-color);
+}
+
+.post-summary h2 a:hover {
+  color: var(--global-theme-color);
+}
+
+.post-summary__image img {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  border-radius: 0;
+}

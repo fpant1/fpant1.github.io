@@ -1,1 +1,2 @@
-nbconvert
+# Python is not required to build this website.
+# For optional notebook authoring only, install nbconvert in a separate venv.
