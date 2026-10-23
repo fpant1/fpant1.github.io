@@ -5,14 +5,20 @@
 .profile-hero {
   display: grid;
   grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  grid-template-areas: "introduction portrait";
   gap: var(--site-space);
   min-height: calc(100svh - var(--site-header-height) - 2rem);
   align-items: start;
 }
 
 .profile-hero__text {
+  grid-area: introduction;
   align-self: end;
   padding-top: 3rem;
+}
+
+.profile-hero__media {
+  grid-area: portrait;
 }
 
 .profile-introduction {
@@ -47,11 +53,14 @@
 @media (width < 48rem) {
   .profile-hero {
     grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "portrait"
+      "introduction";
     min-height: 0;
   }
 
   .profile-hero__text {
-    padding-top: 2rem;
+    padding-top: 0;
   }
 
   .profile-introduction {
