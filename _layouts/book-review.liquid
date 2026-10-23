@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% assign year = page.started | date: '%Y' %}
+{% assign year = page.date | date: '%Y' %}
 {% assign tags = page.tags | join: '' %}
 {% assign categories = page.categories | join: '' %}
 
@@ -43,7 +43,8 @@ layout: default
             &nbsp;&middot;&nbsp;
           {% endif %}
           {% if page.goodreads_review %}
-            <a target="_blank" href="https://www.goodreads.com/review/show/{{ page.goodreads_review }}"><i class="fa-brands fa-goodreads-g"></i>
+            <a target="_blank" href="https://www.goodreads.com/review/show/{{ page.goodreads_review }}"
+              ><i class="fa-brands fa-goodreads-g"></i>
           {% endif %}
           {% assign full_stars = page.stars | floor %}
           {% assign half_star = page.stars | minus: full_stars %}
@@ -91,7 +92,9 @@ layout: default
       {% if categories != '' %}
         &nbsp;&middot;&nbsp;
         {% for category in page.categories %}
-          <a href="{{ category | slugify | prepend: '/books/category/' | relative_url }}"> <i class="fa-solid fa-tag fa-sm"></i> {{ category }}</a>
+          <a href="{{ category | slugify | prepend: '/books/category/' | relative_url }}">
+            <i class="fa-solid fa-tag fa-sm"></i> {{ category -}}
+          </a>
           {% unless forloop.last %}
             &nbsp;
           {% endunless %}
@@ -110,12 +113,20 @@ layout: default
             Cover of <em>{{ page.title }}</em>
           </figcaption>
         {% elsif page.olid %}
-          <img class="empty-review-cover" alt="{{ page.title }} cover" src="http://covers.openlibrary.org/b/olid/{{ page.olid }}-L.jpg?default=false">
+          <img
+            class="empty-review-cover"
+            alt="{{ page.title }} cover"
+            src="http://covers.openlibrary.org/b/olid/{{ page.olid }}-L.jpg?default=false"
+          >
           <figcaption class="empty-review-caption">
             Cover of <em>{{ page.title }}</em> on the <a href="https://openlibrary.org/olid/{{ page.olid }}">Open Library</a>.
           </figcaption>
         {% elsif page.isbn %}
-          <img class="empty-review-cover" alt="{{ page.title }} cover" src="http://covers.openlibrary.org/b/isbn/{{ page.isbn }}-L.jpg?default=false">
+          <img
+            class="empty-review-cover"
+            alt="{{ page.title }} cover"
+            src="http://covers.openlibrary.org/b/isbn/{{ page.isbn }}-L.jpg?default=false"
+          >
           <figcaption class="empty-review-caption">
             Cover of <em>{{ page.title }}</em> on the <a href="https://openlibrary.org/isbn/{{ page.isbn }}">Open Library</a>.
           </figcaption>

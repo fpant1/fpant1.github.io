@@ -4,17 +4,17 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Frank
-middle_name: 
+middle_name:
 last_name: Panton
 contact_note: >
   Feel free to reach out on any of these links!
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Engineering, sustainability, and software projects by Frank Panton.
 footer_text: >
-  
+
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+
+keywords: engineering, sustainability, software, portfolio
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -46,8 +46,8 @@ repo_trophies:
 # Layout
 # -----------------------------------------------------------------------------
 
-navbar_fixed: true
-footer_fixed: true
+navbar_fixed: false
+footer_fixed: false
 search_enabled: false
 socials_in_search: true
 posts_in_search: true
@@ -116,7 +116,7 @@ giscus:
   lang: en
 
 # Disqus comments (DEPRECATED)
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname:
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
@@ -173,6 +173,19 @@ kramdown:
 # Includes & excludes
 include: ["_pages", "_scripts"]
 exclude:
+  - node_modules/
+  - scripts/
+  - tests/
+  - docs/
+  - artifacts/
+  - playwright-report/
+  - test-results/
+  - playwright.config.mjs
+  - eslint.config.mjs
+  - stylelint.config.mjs
+  - requirements.txt
+  - assets/img/robotfile.gif
+  - assets/css/custom.scss
   - bin/
   - CONTRIBUTING.md
   - CUSTOMIZE.md
@@ -204,16 +217,13 @@ plugins:
   - jekyll-archives-v2
   - jekyll-email-protect
   - jekyll-feed
-  - jekyll-get-json
   - jekyll-imagemagick
   # - jekyll-jupyter-notebook
   - jekyll-link-attributes
-  - jekyll-minifier
   - jekyll-paginate-v2
   - jekyll-regex-replace
   - jekyll-sitemap
   - jekyll-tabs
-  - jekyll-terser
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
@@ -227,23 +237,6 @@ defaults:
 
 sass:
   style: compressed
-
-
-# -----------------------------------------------------------------------------
-# Jekyll Minifier
-# -----------------------------------------------------------------------------
-
-jekyll-minifier:
-  compress_javascript: false # set to false since we are using terser as the js minifier
-  exclude: ["robots.txt", "assets/js/search/*.js"]
-
-# -----------------------------------------------------------------------------
-# Terser
-# -----------------------------------------------------------------------------
-
-terser:
-  compress:
-    drop_console: true
 
 # -----------------------------------------------------------------------------
 # Jekyll Archives
@@ -261,7 +254,6 @@ jekyll-archives:
 
 display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
 display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
-
 
 # -----------------------------------------------------------------------------
 # Jekyll Link Attributes
@@ -315,8 +307,8 @@ enable_pirsch_analytics: false # enables Pirsch analytics (https://pirsch.io/)
 enable_openpanel_analytics: false # enables Openpanel analytics (https://openpanel.dev/)
 enable_google_verification: false # enables google site verification
 enable_bing_verification: false # enables bing site verification
-enable_masonry: true # enables automatic project cards arrangement
-enable_math: true # enables math typesetting (uses MathJax)
+enable_masonry: false # enables automatic project cards arrangement
+enable_math: false # enables math typesetting (uses MathJax)
 enable_tooltips: false # enables automatic tooltip links generated for each section titles on pages and posts
 enable_darkmode: true # enables switching between light/dark modes
 enable_navbar_social: false # enables displaying social links in the navbar on the about page
@@ -556,12 +548,8 @@ third_party_libraries:
     version: "2.1.8"
 
 # -----------------------------------------------------------------------------
-# Get external JSON data
+# CV sections, rendered from _data/resume.json
 # -----------------------------------------------------------------------------
-
-jekyll_get_json:
-  - data: resume
-    json: assets/json/resume.json # it can also be an url
 
 jsonresume:
   - basics

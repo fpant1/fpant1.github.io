@@ -38,14 +38,11 @@
       {% endif %}
       {% if include.width %}
         width="{{ include.width }}"
-      {% else %}
-        width="100%"
       {% endif %}
       {% if include.height %}
         height="{{ include.height }}"
-      {% else %}
-        height="auto"
       {% endif %}
+      decoding="async"
       {% if include['min-width'] or include['min-height'] or include['max-width'] or include['max-height'] %}
         style="
           {% if include['min-width'] %}
@@ -62,9 +59,7 @@
           {% endif %}
         "
       {% endif %}
-      {% if include.alt %}
-        alt="{{ include.alt }}"
-      {% endif %}
+      alt="{{ include.alt | default: include.title | default: '' | escape }}"
       {% if include.title %}
         title="{{ include.title }}"
       {% endif %}

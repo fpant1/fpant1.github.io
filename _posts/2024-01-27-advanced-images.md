@@ -15,8 +15,6 @@ Seven countries in ten months — a blur of mountains, deserts, jungles, and bea
   <i class="fa-solid fa-file-pdf"></i> Download my travel notes PDF
 </a>
 
-
-
 ## Canada
 
 6 months skiing in Whistler and working in a ski shop. Got fairly good at both by the end.
@@ -32,7 +30,6 @@ Seven countries in ten months — a blur of mountains, deserts, jungles, and bea
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/canada/canada_8.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
 </swiper-container>
 
-
 ## Bolivia
 
 From the dizzying heights of La Paz to the endless white of the Salt Flats, Bolivia was surreal and intense.
@@ -44,7 +41,6 @@ From the dizzying heights of La Paz to the endless white of the Salt Flats, Boli
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/bolivia/bolivia_4.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/bolivia/bolivia_5.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
 </swiper-container>
-
 
 ## Peru
 
@@ -61,7 +57,6 @@ Peru had it all; Machu Picchu to explore, llamas all over the place and some wil
 
 </swiper-container>
 
-
 ## Colombia
 
 There is nowhere quite like this. Everywhere was full of music and dance, so we joined in.
@@ -75,7 +70,6 @@ There is nowhere quite like this. Everywhere was full of music and dance, so we 
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/colombia/colombia_6.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
 </swiper-container>
 
-
 ## Central America
 
 2 months of surfing the pacific, it was a perfect place to end the trip.
@@ -86,4 +80,3 @@ There is nowhere quite like this. Everywhere was full of music and dance, so we 
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/central/central_4.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/central/central_5.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
 </swiper-container>
-

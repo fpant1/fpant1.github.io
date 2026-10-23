@@ -1,10 +1,9 @@
 <!doctype html>
 <html lang="{{ site.lang }}">
-  <!-- Head -->
   <head>
     {% if page.redirect %}
       {% if page.redirect == true %}
-        {% assign redirect = site.baseurl | append: '/' %}
+        {% assign redirect = '/' | relative_url %}
       {% elsif page.redirect contains '://' %}
         {% assign redirect = page.redirect %}
       {% else %}
@@ -14,49 +13,24 @@
     {% endif %}
     {% include head.liquid %}
   </head>
-
-  <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}{% if page.permalink == '/' %} landing-page{% endif %}">
-
-    <!-- Header -->
+  <body class="site-body">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     {% include header.liquid %}
-
-    <!-- Content -->
-    <div class="container mt-5 
-                {% if page.layout == 'about' %} about-container{% endif %}
-                {% if page.layout == 'blog' %} blog-container{% endif %}" 
-         role="main">
-
-      {% if page.toc and page.toc.sidebar %}
-        {% if page.toc.sidebar == 'right' %}
-          <div class="row">
-            <!-- main content area -->
-            <div class="col-sm-9">{{ content }}</div>
-            <!-- sidebar -->
-            <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
-            </div>
-          </div>
-        {% else %}
-          <div class="row">
-            <!-- sidebar -->
-            <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
-            </div>
-            <!-- main content area -->
-            <div class="col-sm-9">{{ content }}</div>
-          </div>
-        {% endif %}
+    {% assign content_width = page.content_width | default: layout.content_width | default: 'reading' %}
+    <main id="main-content" class="site-main site-container site-main--{{ content_width }}" tabindex="-1">
+      {% if page.toc.sidebar %}
+        <div class="content-with-sidebar">
+          <aside class="content-sidebar" aria-label="On this page">
+            <nav id="toc-sidebar" aria-label="Table of contents"></nav>
+          </aside>
+          <div class="content-body">{{ content }}</div>
+        </div>
       {% else %}
         {{ content }}
       {% endif %}
-    </div>
-
-    <!-- Footer -->
+    </main>
     {% include footer.liquid %}
-
-    <!-- JavaScripts -->
+    <script src="{{ '/assets/js/navigation.js' | relative_url | bust_file_cache }}" defer></script>
     {% include scripts.liquid %}
   </body>
 </html>
-

@@ -14,11 +14,7 @@ document.addEventListener("readystatechange", () => {
       backup.after(chartElement);
 
       /* create echarts */
-      if (echartsTheme === "dark") {
-        var chart = echarts.init(chartElement, "dark-fresh-cut");
-      } else {
-        var chart = echarts.init(chartElement);
-      }
+      const chart = echarts.init(chartElement, echartsTheme === "dark" ? "dark-fresh-cut" : undefined);
 
       chart.setOption(JSON.parse(jsonData));
       window.addEventListener("resize", function () {

@@ -1,54 +1,112 @@
-/******************************************************************************
- * Content
- ******************************************************************************/
+:root {
+  --site-width: 100%;
+  --reading-width: 53rem;
+  --site-gutter: clamp(1rem, 1.8vw, 2.5rem);
+  --site-space: clamp(1.5rem, 4vw, 3rem);
+  --site-header-height: clamp(6rem, 8vw, 8rem);
+}
 
-body {
-  padding-bottom: 70px;
+html {
+  scrollbar-gutter: stable;
+  scroll-padding-top: calc(var(--site-header-height) + 1rem);
+}
+
+body.site-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
   color: var(--global-text-color);
-  background-color: var(--global-bg-color);
+  background: var(--global-bg-color);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    scroll-margin-top: 66px;
+.site-container {
+  width: 100%;
+  max-width: var(--site-width);
+  margin-inline: auto;
+  padding-inline: var(--site-gutter);
+}
+
+.site-main {
+  flex: 1;
+  min-width: 0;
+  padding-block: var(--site-space);
+}
+
+.site-main--reading {
+  max-width: calc(var(--reading-width) + 2 * var(--site-gutter));
+}
+
+.content-with-sidebar {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  gap: 2rem;
+}
+
+.content-sidebar {
+  position: sticky;
+  top: calc(var(--site-header-height) + 1rem);
+  align-self: start;
+}
+
+.content-body {
+  min-width: 0;
+}
+
+.site-body :is(h1, h2, h3, h4, h5, h6, section[id]) {
+  scroll-margin-top: calc(var(--site-header-height) + 1rem);
+}
+
+.site-body :focus-visible {
+  outline: 3px solid var(--global-theme-color);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  inset-block-start: 0.5rem;
+  inset-inline-start: 1rem;
+  transform: translateY(-200%);
+  z-index: 2000;
+  padding: 0.5rem 1rem;
+  background: var(--global-bg-color);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+.site-footer {
+  border-top: 1px solid var(--global-divider-color);
+  padding-block: 1.25rem;
+  color: var(--global-text-color-light);
+}
+
+@media (width < 48rem) {
+  :root {
+    --site-header-height: 4.5rem;
+  }
+
+  .content-with-sidebar {
+    display: block;
+  }
+
+  .content-sidebar {
+    position: static;
+    margin-bottom: 1.5rem;
   }
 }
 
-body.fixed-top-nav {
-  // Add some padding for the nav-bar.
-  padding-top: 56px;
-}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-body.sticky-bottom-footer {
-  // Remove padding below footer.
-  padding-bottom: 0;
-}
-
-.container {
-  // max-width: $max-content-width;
-  max-width: 80%; /* or 1100px instead of the default 800px */
-}
-
-// Profile
-.profile {
-  img {
-    width: 80%;
+  html.transition,
+  html.transition * {
+    transition: none !important;
   }
 }
-
-// TODO: redefine content layout.
-
-/******************************************************************************
- * Publications
- ******************************************************************************/
-
-// TODO: redefine publications layout.
-
-/*****************************************************************************
-* Projects
-*****************************************************************************/
-
-// TODO: redefine projects layout.

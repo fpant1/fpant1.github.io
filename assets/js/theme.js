@@ -21,6 +21,18 @@ let setThemeSetting = (themeSetting) => {
   applyTheme();
 };
 
+// Keep the control understandable when cycling through the saved preference.
+let updateThemeControl = () => {
+  const control = document.getElementById("light-toggle");
+  if (!control) return;
+  const setting = determineThemeSetting();
+  const next = { system: "light", light: "dark", dark: "system" }[setting];
+  const current = setting === "system" ? `system (${determineComputedTheme()})` : setting;
+  const description = `Current: ${current}. Next: ${next}.`;
+  control.setAttribute("aria-label", `Change colour theme. ${description}`);
+  control.title = description;
+};
+
 // Apply the computed dark or light theme to the website.
 let applyTheme = () => {
   let theme = determineComputedTheme();
@@ -56,6 +68,7 @@ let applyTheme = () => {
   }
 
   document.documentElement.setAttribute("data-theme", theme);
+  updateThemeControl();
 
   // Add class to tables.
   let tables = document.getElementsByTagName("table");
@@ -169,11 +182,7 @@ let setEchartsTheme = (theme) => {
     let jsonData = elem.previousSibling.childNodes[0].innerHTML;
     echarts.dispose(elem);
 
-    if (theme === "dark") {
-      var chart = echarts.init(elem, "dark-fresh-cut");
-    } else {
-      var chart = echarts.init(elem);
-    }
+    const chart = echarts.init(elem, theme === "dark" ? "dark-fresh-cut" : undefined);
 
     chart.setOption(JSON.parse(jsonData));
   });
@@ -285,14 +294,15 @@ let initTheme = () => {
   // Add event listener to the theme toggle button.
   document.addEventListener("DOMContentLoaded", function () {
     const mode_toggle = document.getElementById("light-toggle");
-
+    if (!mode_toggle) return;
+    updateThemeControl();
     mode_toggle.addEventListener("click", function () {
       toggleThemeSetting();
     });
   });
 
   // Add event listener to the system theme preference change.
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
     applyTheme();
   });
 };

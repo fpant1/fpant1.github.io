@@ -19,10 +19,7 @@ a.btncv {
   color: var(--global-text-color) !important;
   border: 1px solid var(--global-text-color) !important;
   border-radius: 0.125rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  padding: 0.25rem 1rem;
   text-decoration: none;
   font-weight: 400;
   font-size: 0.7rem;
@@ -74,8 +71,7 @@ td.department {
 
 div.container-links {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: flex-start;
   margin-top: 1rem;
@@ -88,8 +84,7 @@ div.container-links {
 
 div.container-pdf {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: flex-start;
 }
@@ -100,16 +95,13 @@ div.container-pdf {
 
 div.list-groups {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  flex-direction: row;
-  align-content: center;
+  flex-flow: row wrap;
+  place-content: center flex-start;
 }
 
 div.list-group {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-flow: column wrap;
   align-items: flex-start;
   margin-bottom: 2rem;
 }
@@ -177,7 +169,7 @@ span.badge-toc {
   color: var(--global-bg-color);
   background-color: var(--global-theme-color);
   border-radius: 0.125rem;
-  padding: 0.125rem 0.5rem 0.125rem 0.5rem;
+  padding: 0.125rem 0.5rem;
   font-weight: 700 !important;
   display: inline-block;
   inline-size: fit-content;
@@ -195,7 +187,7 @@ ul.timeline li::before {
   top: -0.5rem;
 }
 
-/*ul.timeline::before {
+/* ul.timeline::before {
      content: "●";
      font-size: 1em;
      display: inline-block;

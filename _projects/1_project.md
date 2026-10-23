@@ -2,18 +2,20 @@
 layout: page
 title: Personal Website Development
 description: Building a portfolio site to showcase projects and practice web development.
-img: assets/img/website.png
+img: assets/img/website-thumb.webp
+image_width: 640
+image_height: 426
 importance: 1
 category: work
 related_publications: true
 ---
 
-I wanted a better location to showcase and visualise the projects I’ve been working on, while also using it as an exercise to gain web development experience with css and html.  
+I wanted a better location to showcase and visualise the projects I’ve been working on, while also using it as an exercise to gain web development experience with css and html.
 
 The site is hosted using **GitHub Pages** — you can find the repository here:  
-[fpant1.github.io](https://github.com/fpant1/fpant1.github.io)  
+[fpant1.github.io](https://github.com/fpant1/fpant1.github.io)
 
-I started from the [al-folio Jekyll theme](https://github.com/alshedivat/al-folio) as the base, but ended up making significant formatting changes to get to the current design. It’s still an ongoing project, and I’m continuing to experiment with the layout and styling.  
+I started from the [al-folio Jekyll theme](https://github.com/alshedivat/al-folio) as the base, but ended up making significant formatting changes to get to the current design. It’s still an ongoing project, and I’m continuing to experiment with the layout and styling.
 
 Heres a few examples of the development iterations.
 
@@ -34,7 +36,6 @@ Heres a few examples of the development iterations.
     A few early snapshots during the site’s development and formatting changes.
 </div>
 
-
 ---
-For anyone interested in setting up something similar, this [YouTube tutorial](https://www.youtube.com/watch?v=wFOdDg-Elbg&t=2652s) was the best guide I found to get started with GitHub Pages and editing the theme.  
 
+For anyone interested in setting up something similar, this [YouTube tutorial](https://www.youtube.com/watch?v=wFOdDg-Elbg&t=2652s) was the best guide I found to get started with GitHub Pages and editing the theme.

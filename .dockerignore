@@ -1,3 +1,11 @@
 _site/
 .git/
 assets/
+node_modules/
+vendor/
+.bundle/
+.venv/
+venv/
+artifacts/
+playwright-report/
+test-results/
