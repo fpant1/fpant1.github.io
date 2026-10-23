@@ -51,6 +51,23 @@ test("homepage photo and introduction are not clipped or covered", async ({ page
   expect(image.y).toBeGreaterThanOrEqual(header.y + header.height);
   const hero = await page.locator(".profile-hero").boundingBox();
   expect(image.y + image.height).toBeLessThanOrEqual(hero.y + hero.height + 1);
+  if (page.viewportSize().width < 768) {
+    expect(image.y + image.height).toBeLessThanOrEqual(intro.y);
+  } else {
+    expect(image.x).toBeGreaterThan(intro.x);
+  }
+});
+
+test("first visit starts light and a chosen dark theme survives reload", async ({ page, isMobile }) => {
+  await page.emulateMedia({ colorScheme: "dark" });
+  await page.goto("/");
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+  if (isMobile) await page.getByRole("button", { name: "Menu" }).click();
+  await page.getByRole("button", { name: /Change colour theme/ }).click();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+  await page.reload();
+  await expect(page.locator("html")).toHaveAttribute("data-theme-setting", "dark");
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
 });
 test("keyboard menu, escape and theme toggle work", async ({ page, isMobile }) => {
   await page.goto("/");
@@ -68,7 +85,6 @@ test("keyboard menu, escape and theme toggle work", async ({ page, isMobile }) =
     await menu.click();
   }
   const themeToggle = page.getByRole("button", { name: /Change colour theme/ });
-  await themeToggle.click();
   await expect(page.locator("html")).toHaveAttribute("data-theme-setting", "light");
   await expect(themeToggle).toHaveAccessibleName("Change colour theme. Current: light. Next: dark.");
   await themeToggle.click();

@@ -3,6 +3,12 @@ layout: default
 content_width: home
 ---
 <section class="profile-hero" aria-labelledby="profile-heading">
+  {% if page.profile.image %}
+    {% assign profile_image = page.profile.image | prepend: 'assets/img/' %}
+    <div class="profile-hero__media">
+      {% include media.liquid path=profile_image alt=page.profile.image_alt loading='eager' width=page.profile.width height=page.profile.height %}
+    </div>
+  {% endif %}
   <div class="profile-hero__text">
     <h1 id="profile-heading" class="sr-only">
       {{ site.first_name }}
@@ -16,12 +22,6 @@ content_width: home
       <div class="profile-socials">{% include social.liquid %}</div>
     {% endif %}
   </div>
-  {% if page.profile.image %}
-    {% assign profile_image = page.profile.image | prepend: 'assets/img/' %}
-    <div class="profile-hero__media">
-      {% include media.liquid path=profile_image alt=page.profile.image_alt loading='eager' width=page.profile.width height=page.profile.height %}
-    </div>
-  {% endif %}
 </section>
 {% if page.announcements.enabled %}
   <section class="home-section">

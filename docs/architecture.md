@@ -20,7 +20,7 @@ Keep prose in Markdown and data in `_data/`. Avoid duplicating rendering loops i
 
 `_sass/_layout.scss` defines site width, reading width, gutters, spacing, landmarks and sidebar layout. `_sass/components/` contains navigation, hero, content, project-card and CV styles. `assets/css/main.scss` is the only Sass entry point.
 
-The header and wide pages span the viewport with small edge gutters. The `home` width variant removes the gap below the header and uses an asymmetric hero: thin Inter text aligned low on the left, with the portrait on the right. Its heading remains available to assistive technology without repeating the visible header name. Reading pages retain a constrained line length; mobile uses a single column with natural content height.
+The header and wide pages span the viewport with small edge gutters. The `home` width variant removes the gap below the header and uses an asymmetric hero: thin Inter text aligned low on the left, with the portrait on the right. Its heading remains available to assistive technology without repeating the visible header name. Reading pages retain a constrained line length; mobile uses a single column with the portrait before the introduction and natural content height.
 
 The remaining theme styles support existing post, book and optional feature markup. Vendored icon styles are excluded from linting. The abandoned `custom.scss` and duplicate About layout have been removed. Do not reintroduce global Bootstrap `.container` overrides or viewport-sized hero children.
 
@@ -32,7 +32,7 @@ The visual direction follows Frank's original portfolio and the [Impeccable desi
 - Retain Inter: light 300 for the introduction and navigation, regular 400 for section titles, bold 700 for the name. The asymmetry and empty space on the homepage are intentional. Long-form reading columns stay constrained.
 - Use white or charcoal surfaces with one magenta accent (`#8b208c` in light mode, `#d68bd6` in dark mode). Project titles use the text colour at rest; reserve accent colour for navigation state, links and interaction.
 - Photographs and project thumbnails have square corners. Present projects as images with captions, without decorative card borders, shadows or background panels. Use spacing to separate projects.
-- The theme control uses a thin SVG outline and a minimum 44px target. Its icon reflects the displayed theme; its accessible label and tooltip identify the current preference and next action, including system mode.
+- New visitors start in light mode, regardless of device preference. Saved dark/light/system choices are respected. The theme control uses a thin SVG outline and a minimum 44px target. Its icon reflects the displayed theme; its accessible label and tooltip identify the current preference and next action, including system mode.
 - Use balanced headings and natural paragraph wrapping. Avoid new badge rows, metrics, decorative labels, gradients, icon tiles, hover movement and entrance animations unless the content gives them a purpose.
 - Theme transitions affect colours only. Respect reduced-motion settings and keep keyboard focus visible.
 
