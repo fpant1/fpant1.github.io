@@ -9,10 +9,12 @@ profile:
   height: 1600
   image_alt: Frank Panton on the salt flats in Bolivia
 social: true
+show_project_links: true
+show_featured_projects: true
 announcements:
   enabled: false
 latest_posts:
   enabled: false
 ---
 
-A recent Master’s graduate in Engineering Design, passionate about helping people and the planet. Welcome to my site, where you can explore the projects, experiences, and ideas I’ve been working on.
+I’m Frank, an Engineering Design graduate. I build tools for renewable energy, robotics and everyday automation.

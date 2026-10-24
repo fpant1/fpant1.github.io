@@ -1,4 +1,5 @@
 {% for social in site.data.socials %}
+  {% if include.exclude_email and social[0] == 'email' %}{% continue %}{% endif %}
   {% case social[0] %}
     {% when 'academia_edu' %}
       <a href="https://{{ social[1].organization }}.academia.edu/{{ social[1].username }}" title="Academia.edu"

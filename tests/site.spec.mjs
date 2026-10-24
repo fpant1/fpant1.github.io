@@ -1,7 +1,17 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
-const routes = ["/", "/blog/", "/projects/", "/cv/", "/projects/1_project/", "/projects/2_project/", "/blog/2025/advanced-images/"];
+const routes = [
+  "/",
+  "/blog/",
+  "/projects/",
+  "/cv/",
+  "/projects/1_project/",
+  "/projects/2_project/",
+  "/projects/3_project/",
+  "/projects/5_project/",
+  "/blog/2025/advanced-images/",
+];
 for (const theme of ["light", "dark"]) {
   test.describe(theme + " theme", () => {
     test.beforeEach(async ({ page }) => {
@@ -100,12 +110,34 @@ test("keyboard menu, escape and theme toggle work", async ({ page, isMobile }) =
   await page.reload();
   await expect(page.locator("html")).toHaveAttribute("data-theme-setting", "system");
 });
+test("homepage links lead to projects, contact and readable case studies", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.getByRole("link", { name: "Email me", exact: true })).toHaveAttribute("href", /^mailto:\S+@\S+$/);
+  await page.getByRole("link", { name: "View my projects", exact: true }).click();
+  await expect(page).toHaveURL(/\/projects\/$/);
+  const stories = [
+    ["Agrivoltaic Simulation", "/projects/3_project/", "https://github.com/fpant1/AgrivoltaicsDP5Model"],
+    ["Optimising Robotic Search Algorithms", "/projects/5_project/", "https://github.com/Aasavmp/Robotics-Systems-A2"],
+  ];
+  for (const [title, route, source] of stories) {
+    await page.goto("/");
+    await expect(page.locator(".home-featured article")).toHaveCount(2);
+    await page.getByRole("link", { name: "Read the case study for " + title, exact: true }).click();
+    expect(new URL(page.url()).pathname).toBe(route);
+    await expect(page.getByRole("heading", { level: 1, name: title })).toBeVisible();
+    await expect(page.locator('meta[http-equiv="refresh"]')).toHaveCount(0);
+    await expect(page.locator('.page-content a[href="' + source + '"]')).toBeVisible();
+  }
+});
+
 test("robot animation uses the reduced motion poster", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.goto("/projects/");
-  const image = page.locator('img[src*="robot-thumbnail.webp"]');
-  await image.scrollIntoViewIfNeeded();
-  await expect.poll(() => image.evaluate((element) => element.currentSrc)).toContain("robot-poster.webp");
+  for (const route of ["/", "/projects/", "/projects/5_project/"]) {
+    await page.goto(route);
+    const image = page.locator('img[src*="robot-thumbnail.webp"]');
+    await image.scrollIntoViewIfNeeded();
+    await expect.poll(() => image.evaluate((element) => element.currentSrc)).toContain("robot-poster.webp");
+  }
 });
 
 test("travel gallery advances and stays within the reading column", async ({ page }) => {
