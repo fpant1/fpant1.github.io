@@ -59,6 +59,18 @@
   width: 100%;
 }
 
+.case-study-media {
+  max-width: 30rem;
+  margin: 2rem auto;
+}
+
+.case-study-media figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--global-text-color-light);
+  text-wrap: pretty;
+}
+
 .book-shelf-entry {
   display: inline-block;
   list-style: none;

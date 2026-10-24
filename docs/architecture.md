@@ -10,7 +10,7 @@ Layouts compose shared includes:
 
 - `page-heading.liquid`: page title, optional description and metadata.
 - `media.liquid`: image loading, intrinsic dimensions and optional reduced-motion poster.
-- `project-card.liquid`: card media, title, description and separate source link.
+- `project-card.liquid`: project media, title, description and separate source link; its featured variant uses a summary and a level-three heading beneath the homepage section heading.
 - `post-summary.liquid`: blog index entries.
 - `resume/entry.liquid`: work, education and other dated CV entries.
 
@@ -43,6 +43,10 @@ When changing shared styles, inspect About, Projects, Blog and CV in both themes
 The sole CV source is `_data/resume.json`. `assets/json/resume.liquid` preserves its public JSON URL. Do not edit generated `_site/` files.
 
 Card thumbnails are separate from original media. Keep animation frame count, timing and loop behaviour when compressing. Use `poster` metadata for animations so reduced-motion visitors receive a still image. The robotics original is excluded from the build, but retained for regeneration.
+
+The homepage selects up to two projects with `featured_order`, sorted numerically, and uses each project's `featured_summary` to explain the problem, contribution and outcome. Keep those fields on the project itself so the homepage reuses the same media and destination as the project grid. Featured projects should have a readable local case study, with a separate `github` link for code and reports. The homepage's email action reads `_data/socials.yml`; its social icons omit the duplicate email link.
+
+The agrivoltaics story is grounded in the existing CV and [model repository](https://github.com/fpant1/AgrivoltaicsDP5Model). The robotics story credits Aasav Patel and Frank Panton, matching the [joint project report summary](https://github.com/Aasavmp/Robotics-Systems-A2). Keep simulated results distinct from field measurements and do not invent performance figures or individual responsibilities.
 
 The former placeholder CV PDF is not linked. Set `cv_pdf` only when an actual CV PDF is available. Existing personal project/blog content and routes are preserved; unpublished theme demos are retained for reference.
 

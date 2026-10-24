@@ -15,14 +15,35 @@ content_width: home
       {{ site.last_name }}
     </h1>
     <div class="profile-introduction">{{ content }}</div>
+    {% if page.show_project_links %}
+      <div class="profile-actions">
+        <a href="{{ '/projects/' | relative_url }}">View my projects</a>
+        {% if site.data.socials.email %}
+          <a href="mailto:{{ site.data.socials.email | escape }}">Email me</a>
+        {% endif %}
+      </div>
+    {% endif %}
     {% if page.profile.more_info %}
       <div>{{ page.profile.more_info }}</div>
     {% endif %}
     {% if page.social %}
-      <div class="profile-socials">{% include social.liquid %}</div>
+      <div class="profile-socials">{% include social.liquid exclude_email=page.show_project_links %}</div>
     {% endif %}
   </div>
 </section>
+{% if page.show_featured_projects %}
+  {% assign featured_projects = site.projects | where_exp: 'project', 'project.featured_order' | sort: 'featured_order' %}
+  {% if featured_projects.size > 0 %}
+    <section class="home-featured" aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Selected projects</h2>
+      <div class="featured-projects">
+        {% for project in featured_projects limit: 2 %}
+          {% include project-card.liquid project=project featured=true %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+{% endif %}
 {% if page.announcements.enabled %}
   <section class="home-section">
     <h2>News</h2>
